@@ -37,4 +37,19 @@ class RequestReason extends Model
             ];
         }
     }
+
+    /**
+     * Save a reason
+     * @param object $request
+     * @return 
+     */
+    public static function filterReasons($request)
+    {
+        $query = self::select('request_reasons.*');
+
+        if ($request->reason)
+            $query->where('reason', 'like', '%' . $request->reason . '%');
+
+        return $query->paginate(20);
+    }
 }

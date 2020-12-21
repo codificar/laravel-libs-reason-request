@@ -18,11 +18,13 @@ import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 
 import addreason from './pages/add.vue';
+import lisreason from './pages/list.vue';
 
 new Vue({
     el: '#reasons',
 
     components: {
-        addreason
+        addreason,
+        lisreason
     }
 })

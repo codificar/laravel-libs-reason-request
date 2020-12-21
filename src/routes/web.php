@@ -6,4 +6,5 @@ Route::group(array('namespace' => 'Codificar\ReasonsRequest\Http\Controllers', '
     Route::get('/admin/lib/reasons/list', 'ReasonsController@renderList');
 
     Route::post('/api/lib/reason/save', 'ReasonsController@saveReason');
+    Route::get('/api/lib/reason/list', 'ReasonsController@listReasons');
 });
