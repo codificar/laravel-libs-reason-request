@@ -11,5 +11,9 @@ return [
     'save_error' => 'Erro ao salvar motivo!',
     'action' => 'Ação',
     'actions' => 'Ações',
-    'edit' => 'Editar'
+    'edit' => 'Editar',
+    'setting' => 'Ativar módulo de motivos',
+    'active' => 'Ativar módulo',
+    'yes' => 'Sim',
+    'no' => 'Não'
 ];
