@@ -98,4 +98,9 @@ class ReasonsController extends Controller
     {
         return response()->json(RequestReason::filterReasons($request));
     }
+
+    public function getReasons()
+    {
+        return response()->json(RequestReason::all());
+    }
 }

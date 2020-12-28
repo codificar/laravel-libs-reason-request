@@ -11,3 +11,8 @@ Route::group(array('namespace' => 'Codificar\ReasonsRequest\Http\Controllers', '
     Route::post('/api/lib/reason/save', 'ReasonsController@saveReason');
     Route::get('/api/lib/reason/list', 'ReasonsController@listReasons');
 });
+
+Route::group(array('namespace' => 'Codificar\ReasonsRequest\Http\Controllers'), function() {
+
+    Route::get('/api/lib/reasons/get', 'ReasonsController@getReasons');
+});
