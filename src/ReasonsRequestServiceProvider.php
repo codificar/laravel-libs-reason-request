@@ -22,6 +22,10 @@ class ReasonsRequestServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
 
         $this->publishes([
+            __DIR__.'/Database/seeds' => database_path('seeds')
+        ], 'public_vuejs_libs');
+
+        $this->publishes([
             __DIR__.'/../public/js' => public_path('vendor/codificar/reasons-request'),
         ], 'public_vuejs_libs');
     }
