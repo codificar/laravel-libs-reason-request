@@ -16,7 +16,9 @@ class ReasonsCOntroller extends Controller
      */
     public function renderAdd()
     {
-        return view('reasons::add');
+        return view('reasons::add', [
+            'reason' => null
+        ]);
     }
 
     /**
@@ -26,6 +28,22 @@ class ReasonsCOntroller extends Controller
     public function renderList()
     {
         return view('reasons::list');
+    }
+
+    /**
+     * Render a view for edit reasons
+     * @return view
+     */
+    public function edit($id)
+    {
+        $reason = RequestReason::find($id);
+        
+        if (!$reason)
+            return abort(404);
+
+        return view('reasons::add', [
+            'reason' => json_encode($reason)
+        ]);
     }
 
     /**

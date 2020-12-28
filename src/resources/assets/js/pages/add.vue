@@ -35,18 +35,21 @@ import axios from 'axios';
 
 export default {
   props: [
-    'trans'
+    'trans',
+    'edit'
   ],
   data() {
     return {
-      reason: ''
+      reason: '',
+      reasonId: null
     }
   },
   methods: {
     async saveReason() {
       try {
         const { data: response } = await axios.post('/api/lib/reason/save', {
-          reason: this.reason
+          reason: this.reason,
+          reason_id: this.reasonId
         });
 
         if (response.success) {
@@ -74,7 +77,11 @@ export default {
     }
   },
   mounted() {
-    
+    if (this.edit) {
+      const edit = JSON.parse(this.edit);
+      this.reason = edit.reason;
+      this.reasonId = edit.id;
+    }
   }
 }
 </script>

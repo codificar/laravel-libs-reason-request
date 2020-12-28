@@ -21,14 +21,22 @@ class RequestReason extends Model
     public static function saveReason($request)
     {
         try {
+            $response = [
+                'success' => true,
+                'message' => trans('reasonsrequest::reasons.save_success')
+            ];
+
+            if ($request->reason_id && $reason = self::find($request->reason_id)) {
+                $reason->reason = $request->reason;
+                $reason->save();
+                return $response;
+            }
+            
             $reason = new RequestReason;
             $reason->reason = $request->reason;
             $reason->save();
 
-            return [
-                'success' => true,
-                'message' => trans('reasonsrequest::reasons.save_success')
-            ];
+            return $response;
         } catch (\Throwable $th) {
             \Log::error($th->getMessage());
             return [

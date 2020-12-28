@@ -10,5 +10,6 @@ return [
     'save_success' => 'Motivo salvo com sucesso!',
     'save_error' => 'Erro ao salvar motivo!',
     'action' => 'Ação',
-    'actions' => 'Ações'
+    'actions' => 'Ações',
+    'edit' => 'Editar'
 ];

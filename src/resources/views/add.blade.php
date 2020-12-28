@@ -16,6 +16,7 @@
 	<div id="reasons" style="width: 99%;">
 		<addreason
             :trans="{{ json_encode(trans('reasonsrequest::reasons')) }}"
+			edit="{{ $reason }}"
         />
 	</div>
 @stop

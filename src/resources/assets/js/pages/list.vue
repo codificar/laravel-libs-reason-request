@@ -57,7 +57,7 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
                                         <!-- EDITAR -->
-                                        <a class="dropdown-item" tabindex="-1">edit</a>
+                                        <a class="dropdown-item" :href="'/admin/lib/reasons/edit/' + item.id" tabindex="-1">{{ trans.edit }}</a>
                                     </div>
                                 </div>
                             </td>
@@ -94,7 +94,6 @@ export default {
             });
             
             this.reasons = response;
-            console.log(this.reasons);
         }
     },
     mounted() {
