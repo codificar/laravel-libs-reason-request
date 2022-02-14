@@ -11,4 +11,6 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/resources/assets/js/reasons.vue.js', 'public/js');
+mix.js('src/resources/assets/js/reasons.vue.js', 'public/js').vue();
+
+mix.copy('public/js/reasons.vue.js', '../../../public/vendor/codificar/reasons-request/reasons.vue.js');

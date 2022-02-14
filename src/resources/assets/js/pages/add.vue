@@ -1,35 +1,3 @@
-<template>
-  <div class="col-lg-12">
-    <div class="card card-outline-info">
-        <div class="card-header">
-            <h4 class="m-b-0 text-white">{{ trans.add_title }}</h4>
-        </div>
-        <div class="card-block">
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <label for="usr"> {{ trans.reason }} </label>
-                    <input 
-                      type="text" 
-                      class="form-control"
-                      :placeholder="trans.reason"
-                      v-model="reason"
-                    >
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="form-group text-right button-save">
-            <button type="button" class="btn btn-success" @click="saveReason">
-                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true">
-                  {{ trans.save }}
-                </span>
-            </button>
-        </div>
-    </div>
-  </div>
-</template>
-
 <script>
 import axios from 'axios';
 
@@ -85,7 +53,37 @@ export default {
   }
 }
 </script>
+<template>
+  <div class="col-lg-12">
+    <div class="card card-outline-info">
+        <div class="card-header">
+            <h4 class="m-b-0 text-white">{{ trans.add_title }}</h4>
+        </div>
+        <div class="card-block">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="usr"> {{ trans.reason }} </label>
+                    <input 
+                      type="text" 
+                      class="form-control"
+                      :placeholder="trans.reason"
+                      v-model="reason"
+                    >
+                </div>
+            </div>
+            
+        </div>
 
+        <div class="form-group text-right button-save">
+            <button type="button" class="btn btn-success" @click="saveReason">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true">
+                  {{ trans.save }}
+                </span>
+            </button>
+        </div>
+    </div>
+  </div>
+</template>
 <style>
 .button-save {
     padding-right: 40px;

@@ -17,16 +17,16 @@ Vue.component('pagination', pagination);
 import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 
-import addreason from './pages/add.vue';
-import lisreason from './pages/list.vue';
-import setting from './pages/setting.vue';
+import AddReason from './pages/add.vue';
+import ListReason from './pages/list.vue';
+import Setting from './pages/setting.vue';
 
 new Vue({
     el: '#reasons',
 
     components: {
-        setting,
-        addreason,
-        lisreason
+        setting: Setting,
+        addreason: AddReason,
+        ListReason: ListReason
     }
 })
