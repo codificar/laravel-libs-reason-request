@@ -21,10 +21,10 @@
 
 @section('content')
 	<div id="reasons" style="width: 99%;">
-		<lisreason :trans="{{ json_encode(trans('reasonsrequest::reasons')) }}" />
+		<listreason :trans="{{ json_encode(trans('reasonsrequest::reasons')) }}" />
 	</div>
 @stop
 
 @section('javascripts')
-	<script src="{{ elixir('vendor/codificar/reasons-request/reasons.vue.js') }}"> </script>
+	<script src="{{ asset('vendor/codificar/reasons-request/reasons.vue.js') }}"> </script>
 @stop

@@ -22,5 +22,5 @@
 @stop
 
 @section('javascripts')
-	<script src="{{ elixir('vendor/codificar/reasons-request/reasons.vue.js') }}"> </script>
+	<script src="{{ asset('vendor/codificar/reasons-request/reasons.vue.js') }}"> </script>
 @stop
