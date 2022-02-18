@@ -23,11 +23,11 @@ export default {
         if (response.success) {
           this.$swal({
             icon: 'success',
-            text: response.message,
-            onClose: () => {
-              window.location.replace('/admin/lib/reasons/list');
-            }
+            title: response.message,
+          }).then((result) => { 
+            window.location.replace('/admin/lib/reasons/list');
           });
+
         } else {
           this.$swal({
             icon: 'error',
