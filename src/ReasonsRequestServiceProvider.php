@@ -22,7 +22,7 @@ class ReasonsRequestServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
 
         $this->publishes([
-            __DIR__.'/Database/seeds' => database_path('seeds')
+            __DIR__.'/Database/seeders' => database_path('seeders')
         ], 'public_vuejs_libs');
 
         $this->publishes([
