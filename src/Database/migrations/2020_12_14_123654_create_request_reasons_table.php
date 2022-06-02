@@ -13,12 +13,14 @@ class CreateRequestReasonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_reasons', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('reason');
-            $table->timestamps();
-        });
-    }
+		if (!Schema::hasTable('request_reasons')) {
+			Schema::create('request_reasons', function (Blueprint $table) {
+				$table->increments('id');
+				$table->string('reason');
+				$table->timestamps();
+			});
+		}
+	}
 
     /**
      * Reverse the migrations.
