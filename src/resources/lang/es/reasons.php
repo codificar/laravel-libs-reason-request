@@ -1,19 +1,19 @@
 <?php
 
 return [
-    'add_reason' => 'Adicionar motivo para requisição',
-    'add_title' => 'Adicionar motivo',
+    'add_reason' => 'Agregar motivo para la solicitud',
+    'add_title' => 'Agregar motivo',
     'list_reason' => 'Lista de motivos',
     'filter' => 'Filtrar',
-    'reason' => 'Motivo para requisição',
-    'save' => 'Salvar',
-    'save_success' => 'Motivo salvo com sucesso!',
-    'save_error' => 'Erro ao salvar motivo!',
-    'action' => 'Ação',
-    'actions' => 'Ações',
+    'reason' => 'Motivo de la solicitud',
+    'save' => 'Guardar',
+    'save_success' => 'Motivo guardado exitosamente.',
+    'save_error' => 'Error al guardar el motivo.',
+    'action' => 'Acción',
+    'actions' => 'Acciones',
     'edit' => 'Editar',
-    'setting' => 'Ativar módulo de motivos',
-    'active' => 'Ativar módulo',
-    'yes' => 'Sim',
-    'no' => 'Não'
+    'setting' => 'Activar el módulo de motivos',
+    'active' => 'Activar módulo',
+    'yes' => 'Sí',
+    'no' => 'No'
 ];
